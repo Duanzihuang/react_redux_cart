@@ -16,6 +16,12 @@ module.exports = {
       }
     }]
   },
+  resolve:{
+    alias:{ // 别名
+      '@': path.resolve(__dirname, './src')
+    },
+    extensions: ['.jsx', '.js'] // 拓展
+  },
   plugins:[
       new HtmlWebpackPlugin({
         template:'./public/index.html'

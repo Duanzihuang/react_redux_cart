@@ -11,6 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.16.4",
+    "multer": "^1.4.1",
     "react": "^16.8.3",
     "react-dom": "^16.8.3"
   },
