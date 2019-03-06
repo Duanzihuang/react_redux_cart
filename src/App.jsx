@@ -4,6 +4,7 @@ import RefsAndDom from '@/components/RefsAndDom'
 import Menu from '@/components/DotNotation'
 import DotNotation from '@/components/DotNotation'
 import WebSocketTest from '@/components/WebSocketTest'
+import CounterPanel from './components/redux_demo/CounterPanel'
 
 export default class App extends Component {
   render() {
@@ -24,7 +25,9 @@ export default class App extends Component {
           <Menu.Item />
         </Menu> */}
         {/* 即时通讯 */}
-        <WebSocketTest />
+        {/* <WebSocketTest /> */}
+        {/* Redux Demo */}
+        <CounterPanel />
       </div>
     )
   }
