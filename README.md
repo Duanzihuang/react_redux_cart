@@ -51,3 +51,61 @@ http://blue-zero.com/websocket/
 https://github.com/websockets/ws
 ```
 
+### Redux & React-Redux
+
+> redux 与 react-redux的区别
+
+```
+1、react-redux 提供了容器组件与渲染组件的概念
+
+2、react-redux 简化了数据的获取与更改操作
+```
+
+> redux使用步骤
+
+```
+1、导入 createStore 和 reducer 创建 store
+	import {createStore} from 'redux'
+	import reducer from './reducer'
+	const store = createStore(reducer,defaultValues)
+	
+2、在组件中使用store 获取 store 的内容以及监听store的变化然后更新数据到本地state中
+	store.getState()
+	store.subscribe(this.onChange)
+	
+3、当组件触发了某个行为，调用store.dispatch方法把结果传递给reducer去处理
+	store.dispatch({
+      type: 'INCREMENT',
+      title: this.props.title
+    })
+    export default (state, action) => {
+        ...
+    })
+```
+
+> react-redux使用步骤
+
+```
+1、导入 createStore 和 reducer 创建 store
+	import {createStore} from 'redux'
+	import reducer from './reducer'
+	const store = createStore(reducer,defaultValues)
+	
+2、导入 Provider
+	import {Provider} from 'react-redux'
+
+3、在所有组件外层包裹Provider并且传递store
+	<Provider store={store}>
+		<其它子组件 />
+	</Provider>
+	
+4、在子组件中导入 connect【作用：产生一个容器组件，从而包装一个傻瓜组件】
+	import {connect} from 'react-redux'
+	
+5、mapStateToProps
+	把 store 中的数据 同步到组件的props中
+	
+6、mapDispatchToProps
+	把组件中的行为/事件转化为分发action的动作
+```
+

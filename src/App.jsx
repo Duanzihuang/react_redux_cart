@@ -4,7 +4,10 @@ import RefsAndDom from '@/components/RefsAndDom'
 import Menu from '@/components/DotNotation'
 import DotNotation from '@/components/DotNotation'
 import WebSocketTest from '@/components/WebSocketTest'
-import CounterPanel from './components/redux_demo/CounterPanel'
+// import CounterPanel from './components/redux_demo/CounterPanel'
+import store from './react_redux/store'
+import {Provider} from 'react-redux'
+import CounterPanel from './components/react_redux_demo/CounterPanel'
 
 export default class App extends Component {
   render() {
@@ -27,7 +30,11 @@ export default class App extends Component {
         {/* 即时通讯 */}
         {/* <WebSocketTest /> */}
         {/* Redux Demo */}
-        <CounterPanel />
+        {/* <CounterPanel /> */}
+        {/* React-Redux Demo */}
+        <Provider store={store}>
+          <CounterPanel />
+        </Provider>
       </div>
     )
   }

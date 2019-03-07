@@ -1,0 +1,14 @@
+.left,
+.middle,
+.right {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border: 1px solid rgba(92, 92, 92, 0.3);
+  display: inline-block;
+}
+
+.middle {
+  width: 40px;
+}
