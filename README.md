@@ -1,6 +1,45 @@
 # react_redux_cart
 React + Redux 做的购物车案例
 
+### 多级组件传值 & 兄弟组件传值
+
+> 多级组件传值【从爷爷级传递到孙子级】
+
+```
+1、在爷爷组件(顶级组件中)编写如下代码
+  static childContextTypes = {
+    myvalue: PropTypes.string
+  }
+
+  getChildContext() {
+    return {
+      myvalue: this.state.value
+    }
+  }
+  
+2、在子级组件中使用需编写如下代码
+  static contextTypes = {
+    myvalue: PropTypes.string
+  }
+  
+  render() {
+    const { myvalue } = this.context
+    ...
+  }
+```
+
+> 兄弟组件传值
+
+```
+1、使用node核心模块 events 中的 EventEmitter 创建一个公共的bus
+
+2、在传值的一方，调用 bus.emit('自定义事件',载荷) 传值
+
+3、在接收值的一方，使用 bus.on('自定义事件',data => {...}) 接收值
+```
+
+
+
 ### React表单中受控组件与非受控组件
 
 > 受控组件与非受控组件的区别
