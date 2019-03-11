@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var Event = {}
+
+      /**
+       * 监听事件
+       *
+       * type 就是事件类型，比如click、onchange或是自定义事件myevent
+       * callback 就是事件触发之后的处理函数
+       */
+      Event.on = function(type, callback) {
+        this.handlers = this.handlers || {}
+        this.handlers[type] = this.handlers[type] || []
+
+        // 把回调函数放入数组中
+        this.handlers[type].push(callback)
+      }
+
+      /**
+       * 触发事件
+       * type 事件类型
+       */
+      Event.trigger = function(type) {
+        if (this.handlers[type]) {
+          this.handlers[type].forEach(callbck => {
+            callbck()
+          })
+        }
+      }
+
+      /**
+        Event.on('click',()=>{console.log('click1')})
+        Event.on('click',()=>{console.log('click2')})
+        Event.on('onchange',()=>{console.log('onchange1')})
+        Event.on('onchange',()=>{console.log('onchange2')})
+        
+        Event.trigger('click')
+        */
+
+      Event.on('abc', () => {
+        console.log('abc1')
+      })
+      Event.on('abc', () => {
+        console.log('abc2')
+      })
+
+      Event.trigger('abc')
+    </script>
+  </body>
+</html>
