@@ -2,7 +2,7 @@ const db = require('./db.js')
 
 // 查询全部
 exports.findAll = (req, res) => {
-  db.execQuery('select * from book', result => {
+  db.execQuery('select * from book order by id', result => {
     res.json(result)
   })
 }
@@ -22,7 +22,7 @@ exports.addBook = (req, res) => {
 
   db.execQuery(sql, result => {
     if (result.affectedRows > 0) {
-      res.json({ status: 0, message: '插入成功' })
+      res.json({ status: 0, message: '插入成功', insertId: result.insertId })
     } else {
       res.json({ status: 1, message: '插入失败' })
     }

@@ -8,9 +8,10 @@ import WebSocketTest from '@/components/WebSocketTest'
 import store from './react_redux/store'
 import {Provider} from 'react-redux'
 import CounterPanel from './components/react_redux_demo/CounterPanel'
-import Book from './components/book/Book'
+// import Book from './components/book/Book'
 import GrandPa from './components/grandpa/GrandPa'
 import Parent from './components/brother/Parent'
+import Book from './components/book_networking/Book'
 
 export default class App extends Component {
   render() {
