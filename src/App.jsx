@@ -11,7 +11,9 @@ import CounterPanel from './components/react_redux_demo/CounterPanel'
 // import Book from './components/book/Book'
 import GrandPa from './components/grandpa/GrandPa'
 import Parent from './components/brother/Parent'
-import Book from './components/book_networking/Book'
+// import Book from './components/book_networking/Book'
+import Todo from './components/todos/Todo'
+import Index from './components/cart/redux/view/Index'
 
 export default class App extends Component {
   render() {
@@ -37,9 +39,11 @@ export default class App extends Component {
         {/* <Provider store={store}>
           <CounterPanel />
         </Provider> */}
-        <Book />
+        {/* <Book /> */}
         {/* <GrandPa /> */}
         {/* <Parent/> */}
+        {/* <Todo /> */}
+        <Index/>
       </div>
     )
   }

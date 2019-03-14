@@ -92,6 +92,11 @@ https://github.com/websockets/ws
 
 ### Redux & React-Redux
 
+> redux调试工具
+```
+Chrome : https://github.com/zalmoxisus/redux-devtools-extension
+```
+
 > redux 与 react-redux的区别
 
 ```

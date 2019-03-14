@@ -1,0 +1,25 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.title {
+    margin-top: 0;
+    height: 200px;
+    font-size: 100px;
+    font-weight: 900;
+    background-color: #ff69b4;
+    color: #fff;
+}
+
+.title p {
+    font-size: 20px;
+}
+
+.title p a {
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+}

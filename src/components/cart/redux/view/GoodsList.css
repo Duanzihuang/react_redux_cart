@@ -1,0 +1,18 @@
+.index-container ul li {
+    width: 200px;
+    height: 300px;
+    border: 1px solid #000;
+    margin: 10px;
+    text-align: center;
+}
+
+.index-container ul {
+    display: flex;
+}
+
+.index-container ul li img {
+    width: 180px;
+    height: 180px;
+    display: block;
+    margin: 10px auto 0;
+}
