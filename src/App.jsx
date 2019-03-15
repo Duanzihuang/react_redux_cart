@@ -5,20 +5,27 @@ import Menu from '@/components/DotNotation'
 import DotNotation from '@/components/DotNotation'
 import WebSocketTest from '@/components/WebSocketTest'
 // import CounterPanel from './components/redux_demo/CounterPanel'
-import store from './react_redux/store'
-import {Provider} from 'react-redux'
+// import store from './react_redux/store'
+// import {Provider} from 'react-redux'
 import CounterPanel from './components/react_redux_demo/CounterPanel'
 // import Book from './components/book/Book'
 import GrandPa from './components/grandpa/GrandPa'
 import Parent from './components/brother/Parent'
 // import Book from './components/book_networking/Book'
 import Todo from './components/todos/Todo'
-import Index from './components/cart/redux/view/Index'
+// import Index from './components/cart/redux/view/Index'
+import Index from './components/cart/react_redux/views/Index'
 
-export default class App extends Component {
+import { hot } from 'react-hot-loader/root'
+
+import store from './components/cart/react_redux/store'
+
+import { Provider } from 'react-redux'
+
+class App extends Component {
   render() {
     return (
-      <div>
+      <Provider store={store}>
         {/* 我是根组件 */}
         {/* 非受控组件 */}
         {/* <RefsAndDom /> */}
@@ -44,7 +51,9 @@ export default class App extends Component {
         {/* <Parent/> */}
         {/* <Todo /> */}
         <Index/>
-      </div>
+      </Provider>
     )
   }
 }
+
+export default hot(App)

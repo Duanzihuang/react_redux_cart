@@ -153,3 +153,24 @@ Chrome : https://github.com/zalmoxisus/redux-devtools-extension
 	把组件中的行为/事件转化为分发action的动作
 ```
 
+### 路由 【react-router-dom】
+
+> 常见问题及解决办法
+
+```
+BrowserRouter的刷新报错的问题（Cannot GET /xxx）
+	https://www.jianshu.com/p/82d829df2545
+
+解决办法1：
+	webpack-dev-server --open --inline --content-base . --history-api-fallback
+	
+解决办法2：
+	更改webpack配置文件
+	devServer:{
+        contentBase:'./',
+        host:'localhost',
+        compress:true,
+        historyApiFallback: true
+    }
+```
+
